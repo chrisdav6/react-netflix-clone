@@ -18,7 +18,14 @@ const Row = ({ title, fetchURL }) => {
     <div>
       <h2>{title}</h2>
       {movies.map((movie, idx) => {
-        return <p key={idx}>{movie.original_name}</p>;
+        return (
+          <div className='movie' key={idx}>
+            <img
+              src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
+              alt={movie.name}
+            />
+          </div>
+        );
       })}
     </div>
   );
