@@ -5,7 +5,7 @@ import requests from '../requests';
 const App = () => {
   return (
     <div className='App'>
-      <h1>Netflix Clone</h1>
+      <h1 className='App__title'>Netflix Clone</h1>
       <Row
         title='Netflix Originals'
         fetchURL={requests.fetchNetflixOriginals}

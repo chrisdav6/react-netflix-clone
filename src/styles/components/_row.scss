@@ -1,10 +1,11 @@
-.row {
-  .title {
+.Row {
+  .Row__title {
+    color: #fff;
     margin-top: 0;
     font-size: 1.3rem;
   }
 
-  .row__posters {
+  .Row__posters {
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -15,7 +16,7 @@
       display: none;
     }
 
-    .row__poster {
+    .Row__poster {
       width: 100%;
       max-height: 100px;
       object-fit: contain;

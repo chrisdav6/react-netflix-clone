@@ -18,14 +18,14 @@ const Row = ({ title, fetchURL }) => {
   console.table(movies);
 
   return (
-    <div className='row'>
-      <h2 className='title'>{title}</h2>
+    <div className='Row'>
+      <h2 className='Row__title'>{title}</h2>
 
-      <div className='row__posters'>
+      <div className='Row__posters'>
         {movies.map((movie, idx) => (
           <img
             key={idx}
-            className='row__poster'
+            className='Row__poster'
             src={`${baseImgURL}${movie.poster_path}`}
             alt={movie.name || 'No Name provided!'}
           />
