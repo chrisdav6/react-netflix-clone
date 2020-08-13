@@ -1,3 +1,15 @@
 .Navbar {
-  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+  background: transparent;
+
+  .Navbar__logo {
+    height: 30px;
+  }
+
+  .Navbar__avatar {
+    height: 30px;
+  }
 }
