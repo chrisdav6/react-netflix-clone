@@ -1,4 +1,6 @@
 .Row {
+  margin: 1em;
+
   .Row__title {
     color: #fff;
     margin-top: 0;
@@ -24,8 +26,12 @@
       transition: transform 450ms;
 
       &:hover {
-        transform: scale(1.15);
+        transform: scale(1.09);
       }
+    }
+
+    .Row__posterLarge {
+      max-height: 250px;
     }
   }
 }

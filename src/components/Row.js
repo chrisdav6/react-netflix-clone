@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import instance from '../axios';
 const baseImgURL = 'https://image.tmdb.org/t/p/w200';
 
-const Row = ({ title, fetchURL }) => {
+const Row = ({ title, fetchURL, isLargeRow }) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -25,8 +25,10 @@ const Row = ({ title, fetchURL }) => {
         {movies.map((movie, idx) => (
           <img
             key={idx}
-            className='Row__poster'
-            src={`${baseImgURL}${movie.poster_path}`}
+            className={`Row__poster ${isLargeRow && 'Row__posterLarge'}`}
+            src={`${baseImgURL}${
+              isLargeRow ? movie.poster_path : movie.backdrop_path
+            }`}
             alt={movie.name || 'No Name provided!'}
           />
         ))}
