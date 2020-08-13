@@ -15,8 +15,6 @@ const Row = ({ title, fetchURL, isLargeRow }) => {
     fetchData();
   }, [fetchURL]);
 
-  console.table(movies);
-
   return (
     <div className='Row'>
       <h2 className='Row__title'>{title}</h2>
@@ -27,9 +25,9 @@ const Row = ({ title, fetchURL, isLargeRow }) => {
             key={idx}
             className={`Row__poster ${isLargeRow && 'Row__posterLarge'}`}
             src={`${baseImgURL}${
-              isLargeRow ? movie.poster_path : movie.backdrop_path
+              isLargeRow ? movie?.poster_path : movie?.backdrop_path
             }`}
-            alt={movie.name || 'No Name provided!'}
+            alt={movie?.name || 'No Name provided!'}
           />
         ))}
       </div>
