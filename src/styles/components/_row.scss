@@ -1,7 +1,12 @@
-.movie {
-  display: inline-block;
-  margin: 0.5em;
-  img {
-    width: 100px;
+.row {
+  .title {
+    font-size: 1.3rem;
+  }
+  .poster {
+    display: inline-block;
+    margin: 0.5em;
+    img {
+      width: 100px;
+    }
   }
 }

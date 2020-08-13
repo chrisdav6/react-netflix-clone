@@ -14,19 +14,22 @@ const Row = ({ title, fetchURL }) => {
     fetchData();
   }, [fetchURL]);
 
+  console.table(movies);
+
   return (
-    <div>
-      <h2>{title}</h2>
-      {movies.map((movie, idx) => {
-        return (
-          <div className='movie' key={idx}>
+    <div className='row'>
+      <h2 className='title'>{title}</h2>
+
+      <div className='row-posters'>
+        {movies.map((movie, idx) => (
+          <div className='poster' key={idx}>
             <img
               src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
-              alt={movie.name}
+              alt={movie.name || 'No Name provided!'}
             />
           </div>
-        );
-      })}
+        ))}
+      </div>
     </div>
   );
 };
