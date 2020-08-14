@@ -19,7 +19,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='Navbar' style={{ background: isScrolling && 'black' }}>
+    <nav className={`Navbar ${isScrolling && 'Navbar__black'}`}>
       <img className='Navbar__logo' src={netflixLogo} alt='Netflix Logo' />
       <img
         className='Navbar__avatar'
