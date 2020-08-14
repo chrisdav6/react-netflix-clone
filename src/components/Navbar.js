@@ -11,7 +11,7 @@ const Navbar = () => {
 
   const handleScroll = () => {
     window.addEventListener('scroll', () => {
-      window.scrollY > 100 ? setIsScrolling(true) : setIsScrolling(false);
+      window.scrollY > 50 ? setIsScrolling(true) : setIsScrolling(false);
     });
     return () => {
       window.removeEventListener('scroll');
