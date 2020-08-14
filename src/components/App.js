@@ -17,7 +17,7 @@ const App = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className='App'>
+        <>
           <Navbar />
           <Banner />
           <Row
@@ -32,7 +32,7 @@ const App = () => {
           <Row title='Horror Movies' fetchURL={requests.fetchHorrorMovies} />
           <Row title='Romance Movies' fetchURL={requests.fetchRomanceMovies} />
           <Row title='Documentaries' fetchURL={requests.fetchDocumentaries} />
-        </div>
+        </>
       )}
     </div>
   );
